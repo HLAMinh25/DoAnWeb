@@ -1,0 +1,133 @@
+/* Gradient động cho nền */
+body {
+  margin: 0;
+  background: linear-gradient(-45deg, #1a1a1a, #222, #444, #111);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  text-align: center;
+}
+
+/* Logo inline với nhún nhảy */
+h1 {
+  margin-bottom: 10px;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-inline {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: transform 0.1s ease; /* nhún nhảy mượt */
+}
+
+/* Paragraph & input */
+p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+/* Canvas */
+canvas {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Nút Play / Pause */
+#playPauseBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+#playPauseBtn:hover {
+  background: #666;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-inline {
+    width: 40px;
+    height: 40px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  canvas {
+    width: 90%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-inline {
+    width: 30px;
+    height: 30px;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  canvas {
+    width: 100%;
+    height: 150px;
+  }
+  #playPauseBtn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+/* Chọn hiệu ứng */
+
+/* ----- CSS cho nút tài khoản -----*/
+.account-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 4px;
+  z-index: 999;
+}

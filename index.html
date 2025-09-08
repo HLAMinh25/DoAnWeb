@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Visualizer</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <img src="avatar2.png" alt="Logo" class="logo-inline" id="logo" />
+        Audio Visualizer
+      </h1>
+
+      <p>Chọn file nhạc để xem hiệu ứng trực quan</p>
+      <input type="file" id="audioFile" accept="audio/*" />
+      <canvas id="visualizer"></canvas>
+      <h3>Playlist</h3>
+      <ul id="playlist"></ul>
+      <button id="playPauseBtn">⏸️ Pause</button>
+    </div>
+
+    <!--Chọn Hiệu ứng-->
+
+    <label for="effectSelect">Chọn hiệu ứng:</label>
+    <select id="effectSelect">
+      <option value="bars">Thanh Bar</option>
+      <option value="heart">Trái tim</option>
+      <option value="glow">Thanh Neon</option>
+      <option value="wave">Waveform</option>
+    </select>
+
+    <script src="script.js"></script>
+
+    <a href="account.html">
+      <button class="account-btn">
+        <img
+          alt="Tài khoản"
+          style="width: 32px; height: 32px; border-radius: 50%"
+        />
+      </button>
+    </a>
+  </body>
+</html>
